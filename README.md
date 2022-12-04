@@ -14,10 +14,13 @@ npm install https://github.com/adeherysh/strapi-provider-email-mandrill --save
 
 ## Configuration
 
-### ./config/plugins.js (for javascript)
+### For javascript
 
 ```javascript
+// path: ./config/plugins.js
+
 module.exports = ({ env }) => ({
+  // ...
   email: {
     config: {
       provider: 'strapi-provider-email-mandrill',
@@ -30,13 +33,17 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  // ...
 });
 ```
 
-### ./config/plugins.ts (for typescript)
+### For typescript
 
 ```typescript
+// path: ./config/plugins.ts
+
 export default ({ env }) => ({
+  // ...
   email: {
     config: {
       provider: 'strapi-provider-email-mandrill',
@@ -49,5 +56,11 @@ export default ({ env }) => ({
       },
     },
   },
+  // ...
 });
 ```
+
+## References
+
+- [Strapi - Configuring providers](https://docs.strapi.io/developer-docs/latest/development/providers.html#configuring-providers)
+- [Strapi - Sending emails with a controller or service](https://docs.strapi.io/developer-docs/latest/plugins/email.html#sending-emails-with-a-controller-or-service)
